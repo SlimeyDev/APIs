@@ -49,25 +49,5 @@ async def get_weather(place: str):
         print(data)
         return {"ERROR":"An error occurred!", "CODE":response.status_code}
 
-# @app.get("/lyrics")
-# async def get_lyrics(artist: str, track: str):
-#     url = "https://scrapesoft-music-lyrics.p.rapidapi.com/api/lyrics"
-
-#     querystring = {"access_token":"{accessToken}"}
-
-#     payload = {
-#         "songName": "ENTER_SONG_NAME",
-#         "artistName": "ENTER_ARTIST_NAME"
-#     }
-#     headers = {
-#         "content-type": "application/json",
-#         "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
-#         "X-RapidAPI-Host": "scrapesoft-music-lyrics.p.rapidapi.com"
-#     }
-
-#     response = requests.post(url, json=payload, headers=headers, params=querystring)
-
-    # return response.json()
-
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=5000)
