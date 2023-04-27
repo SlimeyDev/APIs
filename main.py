@@ -11,7 +11,7 @@ app = FastAPI()
 async def random_symbol():
     alphabet = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_+-=[]\;',./{}|:\"<>"
     random_letter = choice(alphabet)
-    return {"letter": random_letter}
+    return {"symbol": random_letter}
 
 @app.get("/weather")
 async def get_weather(place: str):
