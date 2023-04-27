@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from random import choice
 import requests
-import uvicorn
 import os
 from dotenv import load_dotenv
 
@@ -68,6 +67,3 @@ async def get_weather(place: str):
 #     response = requests.post(url, json=payload, headers=headers, params=querystring)
 
     # return response.json()
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=5000)
