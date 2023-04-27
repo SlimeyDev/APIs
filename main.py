@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/random")
 async def random_symbol():
-    alphabet = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_+-=[]\;',./{}|:\"<>"
+    alphabet = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ`~!@#$%^&*()_+-=[]\;',./{}|:<>"
     random_letter = choice(alphabet)
     return {"symbol": random_letter}
 
