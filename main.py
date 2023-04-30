@@ -49,5 +49,9 @@ async def get_weather(place: str):
         print(data)
         return {"ERROR":"An error occurred!", "CODE":response.status_code}
 
+@app.get("/")
+async def no_endpoint():
+    return {"ERROR":"No endpoint provided!"}
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=5000)
